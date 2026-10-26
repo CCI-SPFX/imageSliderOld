@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "SimpleImageSlider",
+    "id": "aa4fb824-73a7-4fe3-b242-58d03101d275",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.21.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "image-slider description"
+      },
+      "longDescription": {
+        "default": "image-slider description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "image-slider Feature",
+        "description": "The feature that activates elements of the image-slider solution.",
+        "id": "2d0443d1-47cf-4874-bb95-56d463f51a25",
+        "version": "1.0.0.2"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/imageSlider2.sppkg"
+  }
+}

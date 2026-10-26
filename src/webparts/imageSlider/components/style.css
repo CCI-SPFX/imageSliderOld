@@ -1,0 +1,151 @@
+.imageSlider {
+  width: 100%;
+  max-height: 400px;
+  max-width:1100px;
+    padding: 65px 0 45px; 
+  overflow: hidden !important;
+  position: relative;
+  margin:0 auto;
+}
+ 
+
+.customSwiper .swiper-slide {
+  /* width: 520px !important;*/
+  height: 300px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border-radius: 6px;
+}
+.customSwiper,
+.customSwiper .swiper {
+  overflow: visible !important;
+}
+ 
+.customSwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; 
+  border-radius: 6px;
+} 
+
+.customSwiper .swiper-slide-active {
+  opacity: 1;  
+  overflow:hidden;
+  transform: scale(1.22, 1.10) !important; 
+} 
+.imageSlider .swiper-slide::after {
+  content: "";
+  position: absolute;
+  inset:0;
+  background-color: rgb(0 0 0 / 35%); 
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index:555 !important;
+}
+ 
+.imageSlider .swiper-slide-active::after {
+  opacity: 0;
+}
+.swiper-pagination.swiper-pagination-clickable{
+    bottom:-38px !important;
+}
+.swiper-pagination-bullet-active{
+    background-color:#000000 !important
+} 
+
+.filterBox{
+    width:100%;
+    display:flex;
+    justify-content:flex-end; 
+    top: 0;
+    width: 100%;
+    position: absolute;
+}
+ 
+.filterBox select{
+    min-width:200px;
+    height:40px;
+    padding:0 42px 0 16px;
+    border:1px solid #d9d9d9;
+    border-radius:8px;
+    background:#ffffff;
+    color:#222;
+    font-size:15px;
+    font-weight:500;
+    cursor:pointer;
+    outline:none;
+    transition:all .25s ease;
+ 
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    background-image:url("data:image/svg+xml;utf8,<svg fill='%23666' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M5.5 7.5L10 12l4.5-4.5'/></svg>");
+    background-repeat:no-repeat;
+    background-position:right 14px center;
+    background-size:16px;
+}
+
+.filterBox select:hover{
+    border-color:#bcbcbc;
+}
+ 
+.filterBox select:focus{
+    border-color:#0d6efd;
+    box-shadow:0 0 0 4px rgb(13 110 253 / 9%);
+}
+ 
+.filterBox select option{
+    color:#222;
+    background:#fff;
+}
+
+
+
+.custom-prev,.custom-next{
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background:#dedede;   /* button background */
+    color:#505050;        /* arrow color */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer; 
+    position:absolute;
+    bottom:7px;
+    right:30px;
+    transition:0.5s ease;
+    user-select:none;
+    z-index:9999;
+}
+
+.custom-prev:hover,
+.custom-next:hover{
+    background:#000000;
+    color:#fff;
+    transition:0.5s ease;
+} 
+.custom-next{
+    right:0px;
+    left:unset;
+} 
+ 
+@media(max-width:767px){
+
+    .filterBox{
+        justify-content:center;
+        margin-bottom:18px;
+    }
+
+    .filterBox select{
+        width:100%;
+        max-width:100%;
+        min-width:auto;
+    }
+    .custom-prev,.custom-next{
+      display:none;
+    }
+}
